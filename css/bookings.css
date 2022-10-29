@@ -1,0 +1,24 @@
+.bookings-waves {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bookings-waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.bookings-waves .shape-fill {
+  fill: var(--primary-color);
+}
+
+#bookings {
+  height: 100vh;
+  background-color: var(--secondary-color);
+}

@@ -1,0 +1,71 @@
+:root {
+  --comp-direction: row;
+
+  --fs-header: calc(2.6em + 1vw);
+  --fs-subheader: calc(0.6em + 1vw);
+
+  --img-width: 30vw;
+}
+
+@media only screen and (max-width: 980px) {
+  :root {
+    --comp-direction: column;
+
+    --img-width: 60vw;
+  }
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--primary-color);
+  background: var(--secondary-color);
+
+  display: flex;
+  flex-direction: var(--comp-direction);
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#main #text-container h1 {
+  font-size: var(--fs-header);
+  line-height: calc(1.1em + 0.5vw);
+}
+
+#main #text-container h4 {
+  font-size: var(--fs-subheader);
+  line-height: calc(0.1 + 0.5vw);
+}
+
+#main #text-container button {
+  margin: 1em 0em;
+  padding: 1em 0.7em;
+
+  color: var(--primary-color);
+  background: #00000000;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 2em;
+}
+
+#main #text-container button:hover {
+  animation: bouncyBtnAnim 1s;
+}
+
+@keyframes bouncyBtnAnim {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  40% {
+    transform: translateY(-1em) scaleY(1.2);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+#main #img-container img {
+  width: var(--img-width);
+}

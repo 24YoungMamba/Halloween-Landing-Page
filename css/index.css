@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Halloween";
+  src: url("../assets/fonts/Scary\ Halloween\ Font.ttf");
+}
+
+:root {
+  --primary-color: #ff9b2c;
+  --secondary-color: #404066;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  font-family: "Halloween"; /* https://www.dafont.com/theme.php?cat=803 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 62.5%;
+}
