@@ -1,3 +1,7 @@
+:root {
+  --fs-h1: 1.8em;
+}
+
 .bookings-waves {
   position: relative;
   top: 0;
@@ -21,4 +25,40 @@
 #bookings {
   height: 100vh;
   background-color: var(--secondary-color);
+}
+
+#bookings #bookings-container {
+  height: 80vh;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#bookings #bookings-container h1 {
+  font-size: calc(var(--fs-h1) + 1vw);
+  color: var(--primary-color);
+}
+
+#bookings #bookings-container img {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+#bookings #bookings-container #bookings-form {
+  margin-left: 5vw;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#bookings #bookings-container #bookings-form > * {
+  margin: 2vh 0;
 }
