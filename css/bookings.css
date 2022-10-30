@@ -1,5 +1,10 @@
 :root {
   --fs-h1: 1.8em;
+
+  --form-padding: 0.6em 1.2em;
+  --form-margin: 0.2em 0em;
+  --form-border: 2px solid var(--primary-color);
+  --form-border-radius: 1em;
 }
 
 .bookings-waves {
@@ -31,7 +36,7 @@
   height: 80vh;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--comp-direction);
 
   justify-content: center;
   align-items: center;
@@ -44,6 +49,8 @@
 }
 
 #bookings #bookings-container img {
+  width: calc(var(--img-width) + 10vw);
+
   border: 5px solid black;
   border-radius: 10px;
 }
@@ -61,4 +68,48 @@
 
 #bookings #bookings-container #bookings-form > * {
   margin: 2vh 0;
+}
+
+#bookings #bookings-container #bookings-form label {
+  color: var(--primary-color);
+  font-size: calc(0.2em + 1vw);
+}
+
+#bookings #bookings-container #bookings-form input,
+select {
+  width: 100%;
+
+  padding: var(--form-padding);
+  margin: var(--form-margin);
+
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+}
+
+#bookings #bookings-container #bookings-form button {
+  padding: var(--form-padding);
+  margin: var(--form-margin);
+
+  color: var(--primary-color);
+  background: #00000000;
+
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+}
+
+#bookings #bookings-container #bookings-form button:focus {
+  animation: btnAnim 0.2s forwards;
+  /* transform: scale(0.8); */
+}
+
+@keyframes btnAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
